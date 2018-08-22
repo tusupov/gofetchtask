@@ -8,8 +8,12 @@
 ``` bash
 $ docker-compose up
 ```
+## API
+POST [`/add`](#api-add) - for new request  
+GET [`/list`](#api-list) - for request list  
+GET [`/delete`](#api-delete) - for delete request by id
 
-## Request
+## <a name="api-add"></a>/add
 Request url `/add` with `POST` json data
 * `method` - request method (string)
 * `url` - request url (string)
@@ -29,7 +33,7 @@ Result is in `json` format
 * `code` - error code
 * `message` - error message
 
-## Request
+## <a name="api-list"></a>/list
 Request url `/list`
 
 ### Result
@@ -43,7 +47,7 @@ Result is in `json` format
 * `code` - error code
 * `message` - error message
 
-## Request
+## <a name="api-delete"></a>/delete
 Request url `/delete` with `GET` param
 * `id` - request id (uint64)
 
