@@ -85,7 +85,7 @@ func writeError(w http.ResponseWriter, code int, message string) {
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"message": message,
-		"code": code,
+		"code":    code,
 	})
 
 }

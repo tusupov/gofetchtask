@@ -14,11 +14,11 @@ import (
 
 var port = flag.Int("port", 8080, "Server port")
 
-func init()  {
+func init() {
 	flag.Parse()
 }
 
-func main()  {
+func main() {
 
 	r := mux.NewRouter()
 
@@ -33,7 +33,7 @@ func main()  {
 
 	// Start server
 	log.Printf("Listening port [%d] ...", *port)
-	if err := http.ListenAndServe(":" + strconv.Itoa(*port), r); err != nil {
+	if err := http.ListenAndServe(":"+strconv.Itoa(*port), r); err != nil {
 		log.Fatal(err)
 	}
 
